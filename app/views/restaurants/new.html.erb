@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Nouveau restaurant</h1>
+
+  <%= simple_form_for @restaurant, url: restaurants_path do |form| %>
+    <!-- Ajoutez ici les champs du formulaire : name, address, phone_number, category -->
+    <%= form.input :name %>
+    <%= form.input :address %>
+    <%= form.input :phone_number %>
+    <%= form.input :category %>
+
+    <%= form.button :submit, 'Créer le restaurant' %>
+  <% end %>
+
+  <%= link_to 'Retourner à la liste', restaurants_path%>
+</div>
