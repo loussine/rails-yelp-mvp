@@ -9,7 +9,9 @@
   <p><strong>Content :</strong> <%= review.content %></p>
 <% end %>
 
-<%= link_to 'Ajouter un avis',  new_restaurant_review_path(@restaurant) %>
+<%= render 'reviews/form', restaurant: @restaurant %>
+
+<%# <%= link_to 'Ajouter un avis',  new_restaurant_review_path(@restaurant) %>
 <%= link_to 'Retourner à la liste', restaurants_path%>
 
  <%# new_review_restaurant %>
